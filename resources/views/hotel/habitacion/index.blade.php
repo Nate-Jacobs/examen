@@ -64,22 +64,24 @@
                                  @foreach ($habitacion as $habi)
                                 <tr>
                                     <td>
-                                        <a href="" class="btn btn-warning btn-sm">Editar</a>
+                                        <a href="{{route('habitacion.edit',$habi->id)}}" class="btn btn-warning btn-sm">Editar</a>
                                         <!-- Button trigger for danger theme modal -->
-                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modal-delete">Eliminar</button>
+                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modal-delete-{{$habi->id}}">Eliminar</button>
                                     </td>
                                     <td>{{$habi->id}}</td>
                                     <td>{{$habi->tipo}}</td>
                                     <td>{{$habi->numero}}</td>
                                     <td>{{$habi->precio}}</td>
-                                    <td>{{$habi->fotografias}}</td>
+                                    <td>
+                                        <img src="{{ url('imagen/habitacion/' . $habi->fotografias) }}" alt="{{ $habi->fotografias }}" height="70px" width="70px" class="img-thumbnail">
+                                    </td>
                                     
                                 </tr>
-                                {{-- @include('compra.proveedor.modal') --}}
+                                @include('hotel.habitacion.modal') 
                                 @endforeach 
                             </tbody>
                         </table>
-                        {{-- {{ $proveedor->links() }} --}}
+                     $habitacion->links() 
                     </div>
                 </div>
             </div>

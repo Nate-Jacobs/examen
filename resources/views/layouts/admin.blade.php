@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="/examen/public/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="/examen/public/plugins/summernote/summernote-bs4.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -78,7 +81,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a onclick="window.location.href='{{ url('/hotel/habitacion') }}'" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 HABITACIONES

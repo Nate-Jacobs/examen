@@ -14,7 +14,7 @@ class Habitacion extends Model
 
     protected $primarykey='id';
 
-    public $timestamp=false;
+    public $timestamps=false;
 
     protected $fillable=['tipo','numero','precio','fotografias'];
 
